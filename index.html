@@ -1,5 +1,4 @@
-   
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -433,6 +432,7 @@ footer.site{border-top:1px solid var(--border);padding:clamp(44px,6vw,64px) 0 30
   .foot-brand{grid-column:span 2}
 }
 @media (max-width:860px){
+  .nav-inner{gap:12px}
   .nav-links{
     position:absolute;top:calc(100% - 4px);left:8px;right:8px;display:none;
     flex-direction:column;align-items:stretch;gap:2px;padding:10px;
@@ -442,12 +442,14 @@ footer.site{border-top:1px solid var(--border);padding:clamp(44px,6vw,64px) 0 30
   }
   .nav.open .nav-links{display:flex}
   .nav-links a{padding:12px 14px;font-size:.95rem}
-  .nav-actions{gap:8px}
-  .nav-actions .btn{padding:9px 13px;font-size:.85rem;border-radius:10px}
-  .nav-actions .btn-offer{display:none}
+  
+  /* Scaled down buttons for mobile to fit all items */
+  .nav-actions{gap:6px}
+  .nav-actions .btn{padding:8px 10px;font-size:.78rem;border-radius:10px}
+  .nav-actions .btn-appstore{padding:8px 10px}
   .nav-actions .btn-appstore span{display:none}
-  .nav-actions .btn-appstore{padding:9px 11px}
   .nav-toggle{display:grid}
+  
   .plans{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
   .plan.featured{order:-1}
 }
@@ -465,8 +467,9 @@ footer.site{border-top:1px solid var(--border);padding:clamp(44px,6vw,64px) 0 30
   .foot-grid{grid-template-columns:1fr}
   .foot-brand{grid-column:span 1}
   .hero-actions .btn{width:100%}
-  .nav-actions .btn-adblue,
-  .nav-actions .btn-primary{padding:8px 11px;font-size:.8rem}
+  /* Extra squeeze for very small phones */
+  .nav-actions .btn{padding:7px 8px;font-size:.72rem}
+  .nav-actions .btn-appstore{padding:7px 8px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
